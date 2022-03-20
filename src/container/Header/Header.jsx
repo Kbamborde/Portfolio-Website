@@ -28,13 +28,13 @@ const Header = () => {
             <motion.span whileHover={{ scale: 1.2 }}>👋</motion.span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am </p>
-              <h1 className="head-text">Micael</h1>
+              <h1 className="head-text">Kunal</h1>
             </div>
           </div>
           <div className="tag-cmp app__flex">
             <p className="p-text">Web Developer</p>
-            <p className="p-text">Designer</p>
             <p className="p-text">Photographer</p>
+            <p className="p-text">Designer</p>
           </div>
         </div>
       </motion.div>
