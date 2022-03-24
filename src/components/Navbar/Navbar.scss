@@ -19,7 +19,9 @@
 
   img {
     width: 90px;
-    height: 20px;
+    height: 30px;
+    object-fit: cover;
+    user-select: none;
 
     @media screen and (min-width: 2000px) {
       width: 180px;

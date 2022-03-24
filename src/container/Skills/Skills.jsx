@@ -15,7 +15,6 @@ const Skills = () => {
     const skillsQuery = `*[_type == "skills"]`;
 
     client.fetch(query).then((data) => {
-      console.log(data);
       setExperience(data);
     });
 
@@ -30,7 +29,7 @@ const Skills = () => {
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {skills?.map((skill) => (
+          {skills.map((skill) => (
             <motion.div
               key={skill.name}
               whileInView={{ opacity: [0, 1] }}
@@ -49,16 +48,15 @@ const Skills = () => {
         </motion.div>
 
         <motion.div className="app__skills-exp">
-          {experience?.map((experience) => (
-            <motion.div className="app__skills-exp-item" key={experience.year}>
+          {experience.map((experience, index) => (
+            <motion.div className="app__skills-exp-item" key={index}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-work">
                 {experience.works.map((work) => (
-                  <>
+                  <div key={index}>
                     <motion.div
-                      key={work.name}
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work app__flex"
@@ -76,7 +74,7 @@ const Skills = () => {
                     >
                       {work.desc}
                     </ReactTooltip>
-                  </>
+                  </div>
                 ))}
               </motion.div>
             </motion.div>

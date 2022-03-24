@@ -67,7 +67,7 @@ const Footer = () => {
               value={name}
               onChange={handleChangeInput}
               autoComplete="off"
-              required="required"
+              required
             />
           </div>
           <div className="app__flex">
@@ -108,5 +108,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, "app__footer"),
   "contact",
-  "app__whitebg"
+  "app__primarybg"
 );
